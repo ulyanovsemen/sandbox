@@ -16,3 +16,12 @@ services:
       retries: 10
       start_period: 10s
       timeout: 3s     
+      
+  astra-dotnet6:
+    build:
+      context: .
+      dockerfile: ./AstraLinux.Web/Dockerfile
+#    args:
+#      DOTNET_VERSION: "6.0"
+    ports:
+      - "8080:8080"
